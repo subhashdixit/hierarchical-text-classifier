@@ -1,0 +1,490 @@
+{
+  "selected_candidate": "constrained_lr_c4",
+  "selection_metric": "validation exact-path accuracy",
+  "candidates": [
+    {
+      "name": "joint_nb",
+      "validation": {
+        "rows": 2091,
+        "exact_path_accuracy": 0.35724533715925394,
+        "invalid_path_rate": 0.0,
+        "unseen_true_path_rows": 53,
+        "levels": {
+          "Cat1": {
+            "accuracy": 0.6652319464371115,
+            "macro_f1": 0.6060951245866248,
+            "weighted_f1": 0.6532407833844561,
+            "unseen_true_label_rows": 0
+          },
+          "Cat2": {
+            "accuracy": 0.44428503108560496,
+            "macro_f1": 0.2081178661913143,
+            "weighted_f1": 0.4044824750420244,
+            "unseen_true_label_rows": 1
+          },
+          "Cat3": {
+            "accuracy": 0.37350549976088,
+            "macro_f1": 0.09932323214940582,
+            "weighted_f1": 0.2939538427258426,
+            "unseen_true_label_rows": 47
+          }
+        },
+        "top_level_confusion": {
+          "labels": [
+            "baby products",
+            "beauty",
+            "grocery gourmet food",
+            "health personal care",
+            "pet supplies",
+            "toys games"
+          ],
+          "matrix": [
+            [
+              31,
+              17,
+              0,
+              59,
+              14,
+              40
+            ],
+            [
+              0,
+              304,
+              1,
+              118,
+              1,
+              0
+            ],
+            [
+              0,
+              7,
+              60,
+              102,
+              0,
+              4
+            ],
+            [
+              0,
+              31,
+              4,
+              521,
+              2,
+              7
+            ],
+            [
+              0,
+              25,
+              0,
+              138,
+              230,
+              6
+            ],
+            [
+              0,
+              16,
+              0,
+              81,
+              27,
+              245
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "constrained_lr_c1",
+      "validation": {
+        "rows": 2091,
+        "exact_path_accuracy": 0.34624581539933047,
+        "invalid_path_rate": 0.0,
+        "unseen_true_path_rows": 53,
+        "levels": {
+          "Cat1": {
+            "accuracy": 0.7647058823529411,
+            "macro_f1": 0.7215531778411334,
+            "weighted_f1": 0.7611015145894927,
+            "unseen_true_label_rows": 0
+          },
+          "Cat2": {
+            "accuracy": 0.5600191296030608,
+            "macro_f1": 0.260732732805091,
+            "weighted_f1": 0.5261391100692772,
+            "unseen_true_label_rows": 1
+          },
+          "Cat3": {
+            "accuracy": 0.3787661406025825,
+            "macro_f1": 0.09573938938528588,
+            "weighted_f1": 0.32741108980732,
+            "unseen_true_label_rows": 47
+          }
+        },
+        "top_level_confusion": {
+          "labels": [
+            "baby products",
+            "beauty",
+            "grocery gourmet food",
+            "health personal care",
+            "pet supplies",
+            "toys games"
+          ],
+          "matrix": [
+            [
+              51,
+              10,
+              0,
+              71,
+              5,
+              24
+            ],
+            [
+              0,
+              346,
+              1,
+              77,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              78,
+              87,
+              0,
+              4
+            ],
+            [
+              0,
+              26,
+              3,
+              532,
+              0,
+              4
+            ],
+            [
+              2,
+              8,
+              0,
+              63,
+              326,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              94,
+              6,
+              266
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "constrained_lr_c4",
+      "validation": {
+        "rows": 2091,
+        "exact_path_accuracy": 0.446676231468197,
+        "invalid_path_rate": 0.0,
+        "unseen_true_path_rows": 53,
+        "levels": {
+          "Cat1": {
+            "accuracy": 0.8144428503108561,
+            "macro_f1": 0.794524031465007,
+            "weighted_f1": 0.8137134793660287,
+            "unseen_true_label_rows": 0
+          },
+          "Cat2": {
+            "accuracy": 0.6212338593974175,
+            "macro_f1": 0.35862967116694405,
+            "weighted_f1": 0.5953145830786256,
+            "unseen_true_label_rows": 1
+          },
+          "Cat3": {
+            "accuracy": 0.47776183644189385,
+            "macro_f1": 0.18764370021729637,
+            "weighted_f1": 0.44215850214738833,
+            "unseen_true_label_rows": 47
+          }
+        },
+        "top_level_confusion": {
+          "labels": [
+            "baby products",
+            "beauty",
+            "grocery gourmet food",
+            "health personal care",
+            "pet supplies",
+            "toys games"
+          ],
+          "matrix": [
+            [
+              75,
+              11,
+              0,
+              43,
+              6,
+              26
+            ],
+            [
+              0,
+              362,
+              2,
+              60,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              116,
+              49,
+              0,
+              4
+            ],
+            [
+              0,
+              36,
+              5,
+              518,
+              1,
+              5
+            ],
+            [
+              2,
+              11,
+              0,
+              48,
+              335,
+              3
+            ],
+            [
+              2,
+              4,
+              2,
+              59,
+              5,
+              297
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "test": {
+    "rows": 1990,
+    "exact_path_accuracy": 0.4663316582914573,
+    "invalid_path_rate": 0.0,
+    "unseen_true_path_rows": 49,
+    "levels": {
+      "Cat1": {
+        "accuracy": 0.8376884422110553,
+        "macro_f1": 0.8146230707846329,
+        "weighted_f1": 0.8369924028752798,
+        "unseen_true_label_rows": 0
+      },
+      "Cat2": {
+        "accuracy": 0.6321608040201006,
+        "macro_f1": 0.36993023352939125,
+        "weighted_f1": 0.6138377574515741,
+        "unseen_true_label_rows": 9
+      },
+      "Cat3": {
+        "accuracy": 0.5040201005025126,
+        "macro_f1": 0.2006255190819,
+        "weighted_f1": 0.47305231472745357,
+        "unseen_true_label_rows": 39
+      }
+    },
+    "top_level_confusion": {
+      "labels": [
+        "baby products",
+        "beauty",
+        "grocery gourmet food",
+        "health personal care",
+        "pet supplies",
+        "toys games"
+      ],
+      "matrix": [
+        [
+          72,
+          6,
+          0,
+          42,
+          8,
+          9
+        ],
+        [
+          2,
+          372,
+          0,
+          49,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          113,
+          48,
+          2,
+          3
+        ],
+        [
+          0,
+          18,
+          8,
+          535,
+          2,
+          7
+        ],
+        [
+          3,
+          2,
+          1,
+          33,
+          287,
+          0
+        ],
+        [
+          8,
+          8,
+          1,
+          53,
+          3,
+          288
+        ]
+      ]
+    },
+    "support_groups": {
+      "under_5_training_examples": {
+        "rows": 188,
+        "exact_path_accuracy": 0.005319148936170213
+      },
+      "at_least_5_training_examples": {
+        "rows": 1802,
+        "exact_path_accuracy": 0.5144284128745837
+      }
+    }
+  },
+  "majority_baseline_test": {
+    "rows": 1990,
+    "exact_path_accuracy": 0.06733668341708543,
+    "invalid_path_rate": 0.0,
+    "unseen_true_path_rows": 49,
+    "levels": {
+      "Cat1": {
+        "accuracy": 0.2864321608040201,
+        "macro_f1": 0.07421875,
+        "weighted_f1": 0.1275518216080402,
+        "unseen_true_label_rows": 0
+      },
+      "Cat2": {
+        "accuracy": 0.0914572864321608,
+        "macro_f1": 0.002840465711521054,
+        "weighted_f1": 0.015327095884579433,
+        "unseen_true_label_rows": 9
+      },
+      "Cat3": {
+        "accuracy": 0.06733668341708543,
+        "macro_f1": 0.0005007024781036081,
+        "weighted_f1": 0.008496342352061627,
+        "unseen_true_label_rows": 39
+      }
+    },
+    "top_level_confusion": {
+      "labels": [
+        "baby products",
+        "beauty",
+        "grocery gourmet food",
+        "health personal care",
+        "pet supplies",
+        "toys games"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          137,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          427,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          169,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          570,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          326,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          361,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "prediction_ms_per_record": 0.01962604673916296,
+  "split_rows": {
+    "train": 5810,
+    "validation": 2091,
+    "test": 1990
+  },
+  "overlap_counts": {
+    "train_validation": {
+      "groups": 0,
+      "texts": 0
+    },
+    "train_test": {
+      "groups": 0,
+      "texts": 0
+    },
+    "validation_test": {
+      "groups": 0,
+      "texts": 0
+    }
+  },
+  "data_audit": {
+    "original_rows": 10000,
+    "blank_rows_removed": 5,
+    "duplicate_rows_removed": 104,
+    "usable_rows": 9891,
+    "groups": 6802,
+    "classes": {
+      "Cat1": 6,
+      "Cat2": 64,
+      "Cat3": 377
+    },
+    "rare_leaf_labels_under_5_rows": 145
+  },
+  "training_seconds": 41.878604708006606,
+  "note": "Single fixed product/text-group holdout; not a benchmark or calibrated confidence estimate."
+}

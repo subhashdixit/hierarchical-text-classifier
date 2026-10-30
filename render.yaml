@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: hierarchical-text-classifier
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health/ready
+    autoDeployTrigger: checksPass

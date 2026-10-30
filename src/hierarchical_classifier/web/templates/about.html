@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}How it works{% endblock %}
+{% block content %}
+  <section class="hero">
+    <p class="eyebrow">A SMALL MODEL, AN EXPLAINABLE WORKFLOW</p>
+    <h1>From review to category.</h1>
+    <p class="lede">
+      Text Atlas classifies English product-related titles and reviews into the existing three-level taxonomy. It does not generate new categories or understand every domain.
+    </p>
+  </section>
+  <div class="strip flow">
+    <div>
+      <strong>01 / Prepare</strong>
+      <p>Normalize Unicode, case and whitespace. Combine title and text identically in training and serving.</p>
+    </div>
+    <div>
+      <strong>02 / Represent</strong>
+      <p>TF-IDF turns words and word pairs into sparse numeric features, emphasizing useful terms.</p>
+    </div>
+    <div>
+      <strong>03 / Classify</strong>
+      <p>Compare a joint-path baseline with level classifiers that score only valid training paths.</p>
+    </div>
+  </div>
+  <div class="workspace">
+    <section class="card">
+      <h2>Why a hierarchy?</h2>
+      <p>
+        A broad department contains categories, which contain narrower subcategories. Selecting complete paths prevents incompatible parent–child predictions.
+      </p>
+      <h3>Why not a large language model?</h3>
+      <p>
+        This task has a fixed taxonomy and a modest dataset. Lightweight classifiers are inexpensive to run, reproducible and a useful baseline.
+      </p>
+    </section>
+    <section class="card">
+      <h2>Use with judgment</h2>
+      <p>
+        Ranking scores are not calibrated probabilities. Short text, unsupported vocabulary, rare categories and the dataset’s “unknown” labels require human review.
+      </p>
+      <p>
+        Inputs are processed in memory and are not stored by this application. Hosting infrastructure may record operational request metadata. Avoid submitting confidential or personal information.
+      </p>
+      <p>
+        Original data provenance and redistribution permission are not established by this demo; see the repository’s data documentation.
+      </p>
+    </section>
+  </div>
+{% endblock %}

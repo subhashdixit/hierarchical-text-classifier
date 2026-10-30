@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Explore three-level product text classification with a reproducible machine learning model.">
+    <title>
+      {% block title %}Text Atlas{% endblock %}
+    · Hierarchical Classifier</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <a class="brand" href="/">◈ <span>Text Atlas<small>HIERARCHICAL CLASSIFICATION</small></span></a>
+      <nav aria-label="Main navigation">
+        {% for route,label in [('pages.index','Classify'),('pages.batch','Batch'),('pages.categories','Categories'),('pages.performance','Performance'),('pages.about','How it works')] %}
+          <a href="{{ url_for(route) }}"
+             {% if request.endpoint==route %}aria-current="page"{% endif %}>{{ label }}</a>
+        {% endfor %}
+      </nav>
+      <span class="badge">Flask + machine learning</span>
+    </header>
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <span>Built by Subhash Dixit · Portfolio demonstration</span><span>No input storage · English text · Scores are not calibrated confidence</span>
+    </footer>
+  </body>
+</html>

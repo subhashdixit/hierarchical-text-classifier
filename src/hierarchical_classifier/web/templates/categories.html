@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Category explorer{% endblock %}
+{% block content %}
+  <section class="hero">
+    <p class="eyebrow">KNOW THE MODEL’S WORLD</p>
+    <h1>Explore the category map.</h1>
+    <p class="lede">
+      These complete paths come from the training partition. Counts show training examples, not the model’s reliability.
+    </p>
+  </section>
+  <section class="card">
+    <form class="filter" method="get">
+      <label for="category">Top-level category</label>
+      <select name="category" id="category">
+        <option value="">All categories</option>
+        {% for top in tops %}
+          <option value="{{ top }}" {% if top==selected %}selected{% endif %}>{{ top }}</option>
+        {% endfor %}
+      </select>
+      <button class="secondary" type="submit">Filter</button>
+    </form>
+    <p class="muted">{{ rows|length }} supported paths shown. Low-count paths have limited evidence.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Level 1</th>
+            <th>Level 2</th>
+            <th>Level 3</th>
+            <th>Training rows</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+            <tr>
+              <td>{{ row.Cat1 }}</td>
+              <td>{{ row.Cat2 }}</td>
+              <td>{{ row.Cat3 }}</td>
+              <td>{{ row.training_rows }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endblock %}

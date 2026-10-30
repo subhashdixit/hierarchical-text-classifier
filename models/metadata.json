@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "model_version": "1.0.0",
+  "trained_at_utc": "2026-10-30T12:20:18.893417+00:00",
+  "dataset_sha256": "80e65e26e4f438b62f01160b39ab786a53de062ab2cb4d1d590f9cce9e668a8f",
+  "config_sha256": "115c4abbc0d30d49ba5ada804cd44db401edfef63126e37d5e211c0def1be21b",
+  "selected_candidate": "constrained_lr_c4",
+  "training_rows": 5810,
+  "vocabulary_size": 8000,
+  "valid_paths": 404,
+  "review_score_threshold": 0.45,
+  "score_description": "Normalized path ranking score; not a calibrated probability of correctness.",
+  "model_sha256": "eb05d30003de3807aa90c0278561611100bdf62ffe7876b48203d103133a1e4f",
+  "sklearn_version": "1.6.1"
+}

@@ -1,0 +1,9 @@
+seed: 42
+max_features: 8000
+min_df: 2
+ngram_max: 2
+review_score_threshold: 0.45
+candidates:
+  - {name: joint_nb, kind: joint_nb, regularization: 1.0}
+  - {name: constrained_lr_c1, kind: levels, regularization: 1.0}
+  - {name: constrained_lr_c4, kind: levels, regularization: 4.0}

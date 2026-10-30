@@ -1,0 +1,405 @@
+Cat1,Cat2,Cat3,training_rows
+baby products,bathing skin care,bathing tubs seats,3
+baby products,bathing skin care,grooming healthcare kits,7
+baby products,bathing skin care,shampoo,1
+baby products,bathing skin care,skin care,9
+baby products,bathing skin care,soaps cleansers,2
+baby products,bathing skin care,unknown,6
+baby products,car seats accessories,accessories,13
+baby products,diapering,changing table pads covers,6
+baby products,diapering,cloth diapers,1
+baby products,diapering,diaper bags,6
+baby products,diapering,diaper changing kits,1
+baby products,diapering,diaper pails refills,3
+baby products,diapering,diaper stackers caddies,1
+baby products,diapering,disposable diapers,29
+baby products,diapering,unknown,1
+baby products,diapering,wipes holders,6
+baby products,feeding,bottle feeding,15
+baby products,feeding,breastfeeding,27
+baby products,feeding,food,1
+baby products,feeding,highchairs booster seats,4
+baby products,feeding,pillows stools,4
+baby products,feeding,solid feeding,14
+baby products,gear,activity centers entertainers,11
+baby products,gear,baby gyms playmats,6
+baby products,gear,baby seats,1
+baby products,gear,backpacks carriers,6
+baby products,gear,playards,12
+baby products,gear,swings,14
+baby products,gifts,albums,1
+baby products,gifts,keepsakes,2
+baby products,gifts,unknown,18
+baby products,health baby care,sun protection,1
+baby products,health baby care,teethers,4
+baby products,nursery,bedding,19
+baby products,nursery,furniture,25
+baby products,nursery,nursery d cor,10
+baby products,nursery,unknown,21
+baby products,potty training,potties seats,10
+baby products,potty training,step stools,3
+baby products,potty training,training pants,3
+baby products,pregnancy maternity,maternity pillows,4
+baby products,safety,bathroom safety,3
+baby products,safety,cabinet locks straps,1
+baby products,safety,edge corner guards,5
+baby products,safety,gates doorways,27
+baby products,safety,kitchen safety,4
+baby products,safety,monitors,7
+baby products,safety,rails rail guards,9
+baby products,safety,sleep positioners,1
+baby products,strollers,accessories,2
+baby products,strollers,standard,3
+baby products,strollers,tandem,5
+baby products,strollers,unknown,1
+beauty,bath body,bath,8
+beauty,bath body,bathing accessories,7
+beauty,bath body,cleansers,61
+beauty,bath body,scrubs body treatments,7
+beauty,bath body,sets,1
+beauty,bath body,unknown,5
+beauty,fragrance,men s,113
+beauty,fragrance,unknown,20
+beauty,fragrance,women s,171
+beauty,hair care,conditioners,28
+beauty,hair care,hair color,39
+beauty,hair care,hair loss products,20
+beauty,hair care,hair scalp treatments,8
+beauty,hair care,shampoo conditioner sets,7
+beauty,hair care,shampoo plus conditioner,1
+beauty,hair care,shampoos,33
+beauty,hair care,styling products,38
+beauty,hair care,styling tools,110
+beauty,hair care,unknown,6
+beauty,makeup,body,7
+beauty,makeup,eyes,35
+beauty,makeup,face,33
+beauty,makeup,lips,27
+beauty,makeup,makeup remover,6
+beauty,makeup,nails,102
+beauty,makeup,unknown,1
+beauty,skin care,body,73
+beauty,skin care,eyes,6
+beauty,skin care,face,134
+beauty,skin care,hands nails,49
+beauty,skin care,maternity,4
+beauty,skin care,sets,2
+beauty,skin care,sun,11
+beauty,skin care,unknown,18
+beauty,tools accessories,bags cases,5
+beauty,tools accessories,cotton swabs,1
+beauty,tools accessories,hair coloring tools,1
+beauty,tools accessories,makeup brushes tools,17
+beauty,tools accessories,mirrors,13
+beauty,tools accessories,nail tools,10
+beauty,tools accessories,unknown,1
+grocery gourmet food,baby food,baby formula,1
+grocery gourmet food,baby food,cereal,1
+grocery gourmet food,beverages,coconut water,8
+grocery gourmet food,beverages,coffee,18
+grocery gourmet food,beverages,energy drinks,1
+grocery gourmet food,beverages,hot cocoa,7
+grocery gourmet food,beverages,juices,18
+grocery gourmet food,beverages,powdered drink mixes,3
+grocery gourmet food,beverages,tea,83
+grocery gourmet food,beverages,unknown,1
+grocery gourmet food,breads bakery,breadsticks,2
+grocery gourmet food,breads bakery,cakes,3
+grocery gourmet food,breads bakery,cookies,6
+grocery gourmet food,breads bakery,fresh baked cookies,3
+grocery gourmet food,breads bakery,stuffing,1
+grocery gourmet food,breads bakery,unknown,1
+grocery gourmet food,breakfast foods,breakfast cereal bars,6
+grocery gourmet food,breakfast foods,cereals,13
+grocery gourmet food,breakfast foods,toaster pastries,2
+grocery gourmet food,candy chocolate,bars,1
+grocery gourmet food,candy chocolate,caramels,2
+grocery gourmet food,candy chocolate,chocolate assortments,3
+grocery gourmet food,candy chocolate,chocolate bars,13
+grocery gourmet food,candy chocolate,chocolate covered fruit,2
+grocery gourmet food,candy chocolate,chocolate covered nuts,1
+grocery gourmet food,candy chocolate,chocolate truffles,1
+grocery gourmet food,candy chocolate,fudge,1
+grocery gourmet food,candy chocolate,gum,4
+grocery gourmet food,candy chocolate,gummy candies,5
+grocery gourmet food,candy chocolate,gummy candy,5
+grocery gourmet food,candy chocolate,hard candies,11
+grocery gourmet food,candy chocolate,jelly beans,3
+grocery gourmet food,candy chocolate,licorice,6
+grocery gourmet food,candy chocolate,mints,3
+grocery gourmet food,candy chocolate,nut clusters,1
+grocery gourmet food,candy chocolate,suckers lollipops,5
+grocery gourmet food,candy chocolate,taffy,3
+grocery gourmet food,candy chocolate,unknown,6
+grocery gourmet food,cooking baking supplies,baking mixes,1
+grocery gourmet food,cooking baking supplies,chocolate,2
+grocery gourmet food,cooking baking supplies,coatings batters,1
+grocery gourmet food,cooking baking supplies,dessert toppings,1
+grocery gourmet food,cooking baking supplies,flours meals,1
+grocery gourmet food,cooking baking supplies,food coloring,2
+grocery gourmet food,cooking baking supplies,nuts seeds,1
+grocery gourmet food,cooking baking supplies,sugar substitutes,1
+grocery gourmet food,cooking baking supplies,sugars sweeteners,1
+grocery gourmet food,cooking baking supplies,unknown,2
+grocery gourmet food,fresh flowers live indoor plants,live indoor plants,5
+grocery gourmet food,gourmet gifts,candy gifts,3
+grocery gourmet food,gourmet gifts,cheese gifts,1
+grocery gourmet food,gourmet gifts,chocolate gifts,2
+grocery gourmet food,gourmet gifts,meat gifts,1
+grocery gourmet food,gourmet gifts,sauces gifts,1
+grocery gourmet food,gourmet gifts,seafood gifts,3
+grocery gourmet food,gourmet gifts,snack gifts,2
+grocery gourmet food,herbs,spices seasonings,11
+grocery gourmet food,meat poultry,lamb,1
+grocery gourmet food,meat poultry,pork,1
+grocery gourmet food,meat poultry,unknown,1
+grocery gourmet food,meat seafood,seafood,4
+grocery gourmet food,pantry staples,canned jarred food,10
+grocery gourmet food,pantry staples,condiments,2
+grocery gourmet food,pantry staples,cooking baking supplies,79
+grocery gourmet food,pantry staples,dried beans,3
+grocery gourmet food,pantry staples,herbs,30
+grocery gourmet food,pantry staples,jams,7
+grocery gourmet food,pantry staples,oils,1
+grocery gourmet food,pantry staples,packaged meals side dishes,2
+grocery gourmet food,pantry staples,pasta noodles,2
+grocery gourmet food,pantry staples,sauces,6
+grocery gourmet food,pantry staples,unknown,2
+grocery gourmet food,produce,fresh fruits,1
+grocery gourmet food,produce,fresh vegetables,1
+grocery gourmet food,sauces dips,dips,1
+grocery gourmet food,sauces dips,sauces,8
+grocery gourmet food,snack food,chips crisps,3
+grocery gourmet food,snack food,cookies,5
+grocery gourmet food,snack food,crackers,8
+grocery gourmet food,snack food,fruit leather,5
+grocery gourmet food,snack food,jerky dried meats,3
+grocery gourmet food,snack food,party mix,2
+grocery gourmet food,snack food,popcorn,3
+grocery gourmet food,snack food,pretzels,2
+grocery gourmet food,snack food,puffed snacks,2
+grocery gourmet food,snack food,salsas,1
+health personal care,baby child care,health care,27
+health personal care,baby child care,personal care,1
+health personal care,baby child care,unknown,2
+health personal care,health care,allergy,11
+health personal care,health care,alternative medicine,58
+health personal care,health care,cough cold,12
+health personal care,health care,diabetes,9
+health personal care,health care,digestion nausea,16
+health personal care,health care,family planning contraceptives,8
+health personal care,health care,first aid,44
+health personal care,health care,foot care,35
+health personal care,health care,incontinence,29
+health personal care,health care,massage relaxation,53
+health personal care,health care,pain relievers,63
+health personal care,health care,pill cases splitters,13
+health personal care,health care,sleep snoring,13
+health personal care,health care,smoking cessation,4
+health personal care,health care,stimulants,2
+health personal care,health care,stress reduction,10
+health personal care,health care,therapeutic skin care,6
+health personal care,health care,thermometers,5
+health personal care,health care,unknown,7
+health personal care,health care,women s health,5
+health personal care,household supplies,air fresheners,3
+health personal care,household supplies,cleaning tools,43
+health personal care,household supplies,dishwashing,11
+health personal care,household supplies,household batteries,62
+health personal care,household supplies,household cleaning,58
+health personal care,household supplies,laundry,10
+health personal care,household supplies,lighters,11
+health personal care,household supplies,paper plastic,18
+health personal care,household supplies,unknown,9
+health personal care,medical supplies equipment,bathroom aids safety,23
+health personal care,medical supplies equipment,beds accessories,11
+health personal care,medical supplies equipment,braces,87
+health personal care,medical supplies equipment,daily living aids,30
+health personal care,medical supplies equipment,health monitors,50
+health personal care,medical supplies equipment,mobility aids equipment,26
+health personal care,medical supplies equipment,occupational physical therapy aids,8
+health personal care,medical supplies equipment,tests,3
+health personal care,medical supplies equipment,unknown,2
+health personal care,nutrition wellness,nutrition bars drinks,106
+health personal care,nutrition wellness,sports supplements,26
+health personal care,nutrition wellness,unknown,6
+health personal care,nutrition wellness,vitamins supplements,392
+health personal care,nutrition wellness,weight loss products,17
+health personal care,personal care,deodorants antiperspirants,19
+health personal care,personal care,ear care,5
+health personal care,personal care,eye care,11
+health personal care,personal care,feminine care,9
+health personal care,personal care,foot care,8
+health personal care,personal care,lip care products,11
+health personal care,personal care,oral hygiene,88
+health personal care,personal care,shaving hair removal,165
+health personal care,personal care,unknown,1
+health personal care,sexual wellness,adult toys games,24
+health personal care,sexual wellness,bondage gear accessories,1
+health personal care,sexual wellness,novelties,1
+health personal care,sexual wellness,safer sex,14
+health personal care,sexual wellness,sensual delights,1
+health personal care,sexual wellness,sex furniture,1
+health personal care,sexual wellness,sexual enhancers,1
+health personal care,sexual wellness,unknown,3
+pet supplies,birds,cages accessories,5
+pet supplies,birds,feeding watering supplies,4
+pet supplies,birds,food,12
+pet supplies,birds,health supplies,1
+pet supplies,birds,toys,7
+pet supplies,birds,treats,1
+pet supplies,bunny rabbit central,carriers,1
+pet supplies,bunny rabbit central,food,2
+pet supplies,bunny rabbit central,houses habitats,7
+pet supplies,bunny rabbit central,rabbit hutches,1
+pet supplies,cats,beds furniture,50
+pet supplies,cats,carriers strollers,5
+pet supplies,cats,cat flaps,12
+pet supplies,cats,collars,3
+pet supplies,cats,educational repellents,11
+pet supplies,cats,feeding watering supplies,24
+pet supplies,cats,food,15
+pet supplies,cats,grooming,29
+pet supplies,cats,health supplies,38
+pet supplies,cats,litter housebreaking,36
+pet supplies,cats,toys,42
+pet supplies,cats,treats,7
+pet supplies,dogs,apparel accessories,19
+pet supplies,dogs,beds furniture,21
+pet supplies,dogs,carriers travel products,21
+pet supplies,dogs,collars,53
+pet supplies,dogs,doors,8
+pet supplies,dogs,feeding watering supplies,12
+pet supplies,dogs,food,8
+pet supplies,dogs,grooming,18
+pet supplies,dogs,health supplies,65
+pet supplies,dogs,houses,40
+pet supplies,dogs,litter housebreaking,21
+pet supplies,dogs,toys,78
+pet supplies,dogs,training behavior aids,24
+pet supplies,dogs,treats,48
+pet supplies,fish aquatic pets,aquarium d cor,15
+pet supplies,fish aquatic pets,aquarium heaters,3
+pet supplies,fish aquatic pets,aquarium hoods,1
+pet supplies,fish aquatic pets,aquarium lights,6
+pet supplies,fish aquatic pets,aquarium starter kits,2
+pet supplies,fish aquatic pets,aquariums,6
+pet supplies,fish aquatic pets,automatic feeders,1
+pet supplies,fish aquatic pets,breeding tanks,1
+pet supplies,fish aquatic pets,cleaners,4
+pet supplies,fish aquatic pets,food,3
+pet supplies,fish aquatic pets,health supplies,4
+pet supplies,fish aquatic pets,pumps filters,34
+pet supplies,fish aquatic pets,test kits,1
+pet supplies,fish aquatic pets,water treatments,6
+pet supplies,small animals,feeding watering supplies,1
+pet supplies,small animals,food,5
+pet supplies,small animals,houses habitats,1
+toys games,action toy figures,accessories,10
+toys games,action toy figures,figures,38
+toys games,action toy figures,playsets,13
+toys games,arts crafts,aprons smocks,2
+toys games,arts crafts,clay dough,5
+toys games,arts crafts,craft kits,25
+toys games,arts crafts,drawing painting supplies,9
+toys games,arts crafts,drawing sketching tablets,1
+toys games,arts crafts,easels,7
+toys games,arts crafts,stickers,2
+toys games,arts crafts,unknown,9
+toys games,baby toddler toys,activity play centers,2
+toys games,baby toddler toys,balls,2
+toys games,baby toddler toys,bath toys,4
+toys games,baby toddler toys,blocks,1
+toys games,baby toddler toys,car seat stroller toys,1
+toys games,baby toddler toys,music sound,3
+toys games,baby toddler toys,push pull toys,7
+toys games,baby toddler toys,rattles,5
+toys games,baby toddler toys,shape sorters,9
+toys games,baby toddler toys,stacking nesting toys,6
+toys games,baby toddler toys,stuffed animals toys,6
+toys games,baby toddler toys,teaching clocks,2
+toys games,baby toddler toys,unknown,15
+toys games,building toys,building sets,41
+toys games,building toys,marble runs,1
+toys games,building toys,stacking blocks,11
+toys games,building toys,unknown,7
+toys games,dolls accessories,doll accessories,20
+toys games,dolls accessories,dollhouse accessories,3
+toys games,dolls accessories,dollhouses,5
+toys games,dolls accessories,dolls,9
+toys games,dolls accessories,playsets,3
+toys games,dress up pretend play,pretend play,62
+toys games,electronics for kids,electronic pets,4
+toys games,electronics for kids,electronic toys,16
+toys games,electronics for kids,personal video players accessories,1
+toys games,electronics for kids,systems accessories,8
+toys games,electronics for kids,unknown,24
+toys games,games,battling tops,1
+toys games,games,board games,61
+toys games,games,card games,27
+toys games,games,dice gaming dice,3
+toys games,games,game collections,1
+toys games,games,game room games,1
+toys games,games,stacking games,8
+toys games,games,standard playing card decks,5
+toys games,games,tile games,2
+toys games,games,trading card games,5
+toys games,games,unknown,6
+toys games,grown up toys,action toy figures,3
+toys games,grown up toys,hobbies,12
+toys games,grown up toys,novelty gag toys,7
+toys games,grown up toys,puzzles,1
+toys games,grown up toys,unknown,22
+toys games,hobbies,coin collecting,1
+toys games,hobbies,model building kits tools,18
+toys games,hobbies,radio control,7
+toys games,hobbies,rockets,4
+toys games,hobbies,scaled model vehicles,3
+toys games,hobbies,trains accessories,23
+toys games,hobbies,unknown,1
+toys games,learning education,basic life skills toys,4
+toys games,learning education,electronics,1
+toys games,learning education,flash cards,5
+toys games,learning education,geography,10
+toys games,learning education,habitats,6
+toys games,learning education,mathematics counting,3
+toys games,learning education,science,45
+toys games,learning education,unknown,27
+toys games,novelty gag toys,flying toys,2
+toys games,novelty gag toys,gag toys practical jokes,15
+toys games,novelty gag toys,magic kits accessories,5
+toys games,novelty gag toys,money banks,1
+toys games,novelty gag toys,prisms kaleidoscopes,3
+toys games,novelty gag toys,toy balls,5
+toys games,novelty gag toys,unknown,18
+toys games,novelty gag toys,viewfinders,1
+toys games,novelty gag toys,wind up toys,2
+toys games,puzzles,brain teasers,5
+toys games,puzzles,d puzzles,1
+toys games,puzzles,floor puzzles,7
+toys games,puzzles,jigsaw puzzles,17
+toys games,puzzles,pegged puzzles,12
+toys games,puzzles,unknown,6
+toys games,sports outdoor play,ball pits accessories,2
+toys games,sports outdoor play,beanbags foot bags,1
+toys games,sports outdoor play,blasters foam play,3
+toys games,sports outdoor play,gardening tools,1
+toys games,sports outdoor play,gym sets swings,4
+toys games,sports outdoor play,kites wind spinners,1
+toys games,sports outdoor play,play tents tunnels,4
+toys games,sports outdoor play,pogo sticks hoppers,1
+toys games,sports outdoor play,pools water fun,5
+toys games,sports outdoor play,sandboxes accessories,2
+toys games,sports outdoor play,sports,7
+toys games,sports outdoor play,unknown,2
+toys games,stuffed animals plush,animals figures,90
+toys games,stuffed animals plush,plush backpacks purses,1
+toys games,stuffed animals plush,plush puppets,1
+toys games,stuffed animals plush,puppets,6
+toys games,stuffed animals plush,teddy bears,1
+toys games,stuffed animals plush,unknown,5
+toys games,tricycles,scooters wagons,22
+toys games,vehicles remote control,die cast vehicles,1
+toys games,vehicles remote control,play trains railway sets,23
+toys games,vehicles remote control,play vehicles,18
+toys games,vehicles remote control,vehicle playsets,6
