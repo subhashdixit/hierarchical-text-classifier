@@ -34,3 +34,18 @@ def test_persistent_connection_failure_is_not_reported_as_success(monkeypatch):
     monkeypatch.setattr(smoke_test, "urlopen", fail)
     with pytest.raises(SystemExit, match="failed after 1"):
         smoke_test.check("http://example.test", 1)
+
+
+def test_old_deployment_is_retried_until_expected_revision(monkeypatch):
+    responses = iter(
+        [
+            BytesIO(b'{"status":"ready","revision":"old"}'),
+            BytesIO(b'{"status":"ready","revision":"approved"}'),
+            BytesIO(b'{"status":"predicted","categories":["a","b","c"]}'),
+        ]
+    )
+    monkeypatch.setattr(
+        smoke_test, "urlopen", lambda *_args, **_kwargs: next(responses)
+    )
+    monkeypatch.setattr(smoke_test.time, "sleep", lambda _: None)
+    smoke_test.check("http://example.test", 2, expected_revision="approved")

@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir --no-deps . && useradd --create-home --uid 10001 
 ENV MODEL_DIR=/app/models APP_ROOT=/app
 USER appuser
 EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=45s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready')"
+HEALTHCHECK --interval=30s --timeout=5s --start-period=45s CMD python -c "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:' + os.getenv('PORT', '8000') + '/health/ready')"
 CMD ["gunicorn", "--config", "gunicorn.conf.py", "wsgi:app"]

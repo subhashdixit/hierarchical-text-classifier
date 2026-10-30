@@ -18,4 +18,4 @@ jobs:
           python-version: '3.11'
       - name: Require the configured deployment URL
         run: test -n "$APP_URL"
-      - run: python scripts/smoke_test.py --url "$APP_URL" --attempts 24
+      - run: python scripts/smoke_test.py --url "$APP_URL" --attempts 24 --expected-revision "${{ github.sha }}"

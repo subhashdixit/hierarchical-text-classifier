@@ -9,3 +9,9 @@ Inspect Render build logs for dependency/package issues, runtime logs for model 
 Rollback by reverting the complete code/model/dependency release through a PR. A dashboard rollback can restore service temporarily, but reconcile GitHub afterwards. No automatic rollback based on prediction quality is implemented.
 
 Check /health/live versus /health/ready to distinguish a responding process from a usable model. A 503 readiness response should block traffic promotion. Smoke checks test an example, not overall live accuracy.
+
+## Configured service
+
+Public URL: https://hierarchical-text-classifier.onrender.com
+
+The GitHub Actions APP_URL variable points to this service. The live verifier requires the current workflow commit in `/health/ready`, then checks an actual prediction. This prevents accepting an old healthy deployment as proof that a new commit is live. Docker health checks use the same PORT setting as Gunicorn.

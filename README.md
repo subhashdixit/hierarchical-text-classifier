@@ -4,7 +4,9 @@ A Flask web application and JSON API that organize English product-related title
 
 [![CI](https://github.com/subhashdixit/hierarchical-text-classifier/actions/workflows/ci.yml/badge.svg)](https://github.com/subhashdixit/hierarchical-text-classifier/actions/workflows/ci.yml)
 
-**Deployment:** configuration is ready for Render; a verified live URL will be added after deployment succeeds. The app runs locally and in Docker using the commands below.
+**Live application:** [Open Text Atlas](https://hierarchical-text-classifier.onrender.com) · [GitHub Actions](https://github.com/subhashdixit/hierarchical-text-classifier/actions)
+
+Hosted on Render’s free plan; the first request after inactivity may take 50 seconds or longer. The app also runs locally and in Docker using the commands below.
 
 **Purpose:** turn an exploratory notebook into a reproducible, tested and deployable machine-learning application. This is a portfolio demonstration, not a production classification service with an availability guarantee.
 
@@ -342,7 +344,7 @@ python scripts/smoke_test.py --url http://127.0.0.1:8000 --attempts 3
 
 Apply formatting with `python -m black src tests scripts wsgi.py gunicorn.conf.py`.
 
-Tests cover product/text split separation, cleaning and duplicate counts, constrained category paths, unsupported input, model checksum failure, single/batch prediction, CSV formulas, HTTP errors, file limits, readiness failures, markup escaping and a complete small synthetic train/save/load run. The real checked-in artifact is exercised too. The smoke script checks a running HTTP server and an actual prediction; it does not replace the unit tests.
+Tests cover product/text split separation, cleaning and duplicate counts, constrained category paths, unsupported input, model checksum failure, single/batch prediction, CSV formulas, HTTP errors, file limits, readiness failures, markup escaping and a complete small synthetic train/save/load run. The real checked-in artifact is exercised too. The smoke script checks a running HTTP server and an actual prediction; use `--expected-revision <commit-sha>` to reject a healthy but outdated deployment. It does not replace the unit tests.
 
 The artifact check enforces zero recorded split overlap, zero invalid test paths, provenance hashes and fixed-dataset regression floors: at least 0.40 exact-path and 0.75 top-level accuracy, exceeding the majority-path baseline. Those are regression gates, **not production acceptance targets**. Any intentional data change requires reviewing these criteria.
 
@@ -393,6 +395,8 @@ flowchart TD
 Render's **After CI Checks Pass** setting performs automatic CD from `main`. Its health check runs during deployments. The separate live-prediction verifier is deliberately manual so it cannot create a pending check that waits for the deployment while Render waits for all checks to finish.
 
 Actions are pinned to full commit hashes with version comments. Dependabot proposes package and action updates. CI runs `pip check` for dependency consistency; this is **not** a vulnerability scan. No scheduled production accuracy monitoring or automatic retraining is claimed.
+
+**Main branch protection is enabled:** a pull request and all three named CI checks are required, including for administrators. Force pushes and branch deletion are blocked. This solo repository does not require an independent reviewer approval; review is still part of the documented contribution process. Merged feature branches are deleted automatically.
 
 Typical contribution flow:
 
