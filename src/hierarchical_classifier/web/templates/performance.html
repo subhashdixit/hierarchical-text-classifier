@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Model performance{% endblock %}
+{% block content %}
+  <section class="hero">
+    <p class="eyebrow">MEASURED, NOT ASSUMED</p>
+    <h1>Understand the trade-offs.</h1>
+    <p class="lede">
+      Recorded results on a fixed holdout of unseen product/text groups. These numbers do not measure live production accuracy.
+    </p>
+  </section>
+  {% if metrics %}
+    <div class="metric-grid">
+      <div class="card">
+        <small>Complete-path accuracy</small><strong>{{ '%.1f'|format(metrics.test.exact_path_accuracy * 100) }}%</strong>
+      </div>
+      <div class="card">
+        <small>Test records</small><strong>{{ metrics.test.rows }}</strong>
+      </div>
+      <div class="card">
+        <small>Invalid path rate</small><strong>{{ '%.1f'|format(metrics.test.invalid_path_rate * 100) }}%</strong>
+      </div>
+      <div class="card">
+        <small>Training paths</small><strong>{{ metadata.valid_paths }}</strong>
+      </div>
+    </div>
+    <section class="card">
+      <h2>Results by category level</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Accuracy</th>
+              <th>Macro F1</th>
+              <th>Weighted F1</th>
+              <th>Unseen true-label rows</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for level, values in metrics.test.levels.items() %}
+              <tr>
+                <td>{{ level }}</td>
+                <td>{{ '%.3f'|format(values.accuracy) }}</td>
+                <td>{{ '%.3f'|format(values.macro_f1) }}</td>
+                <td>{{ '%.3f'|format(values.weighted_f1) }}</td>
+                <td>{{ values.unseen_true_label_rows }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="workspace">
+      <section class="card">
+        <h2>How selection worked</h2>
+        <p>
+          Selected <code>{{ metrics.selected_candidate }}</code> using validation exact-path accuracy. No test labels were used for selection or taxonomy construction.
+        </p>
+        <table>
+          <tr>
+            <th>Candidate</th>
+            <th>Validation exact path</th>
+          </tr>
+          {% for candidate in metrics.candidates %}
+            <tr>
+              <td>{{ candidate.name }}</td>
+              <td>{{ '%.3f'|format(candidate.validation.exact_path_accuracy) }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </section>
+      <section class="card">
+        <h2>Read the limitations</h2>
+        <p>
+          {{ metrics.test.unseen_true_path_rows }} test records have paths absent from training. Those records remain in evaluation and count as errors.
+        </p>
+        <p>
+          Same-product and repeated-text groups never cross the splits. Rare categories, ambiguous reviews and domain changes remain difficult.
+        </p>
+        <p>Model {{ metadata.model_version }} · trained {{ metadata.trained_at_utc[:10] }}</p>
+        <a href="/api/v1/metrics">Download the full metrics JSON</a>
+      </section>
+    </div>
+  {% else %}
+    <div class="notice">No evaluation report available.</div>
+  {% endif %}
+{% endblock %}

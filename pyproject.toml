@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hierarchical-text-classifier"
+version = "1.0.0"
+description = "Flask application for constrained three-level text classification"
+requires-python = ">=3.10,<3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hierarchical_classifier = ["web/templates/**/*.html", "web/templates/*.html", "web/static/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.pylint.main]
+source-roots = ["src"]
+ignore-paths = ["notebooks/.*", "archive/.*"]
+
+[tool.pylint.messages_control]
+disable = ["too-few-public-methods", "too-many-locals", "too-many-statements", "too-many-arguments", "too-many-positional-arguments", "duplicate-code", "import-outside-toplevel"]
+
+[tool.pylint.format]
+max-line-length = 88
+
+[tool.pylint.design]
+max-attributes = 12

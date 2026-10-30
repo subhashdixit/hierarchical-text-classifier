@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Classify text{% endblock %}
+{% block content %}
+  <section class="hero">
+    <p class="eyebrow">FROM WORDS TO STRUCTURE</p>
+    <h1>A place for every piece of text.</h1>
+    <p class="lede">
+      Turn a title and review into a three-level category path. Explore what the model predicts—and where it needs a human second look.
+    </p>
+  </section>
+  <div class="workspace">
+    <section class="card">
+      <div class="section-heading">
+        <h2>Classify your text</h2>
+        <span class="muted">01 / Input</span>
+      </div>
+      <p class="muted">Describe a product, its features or your experience using it.</p>
+      <div class="examples">
+        <span>Try an example</span>
+        <button type="button" class="chip" data-example="dog">Dog toy</button>
+        <button type="button" class="chip" data-example="vitamin">Vitamins</button>
+        <button type="button" class="chip" data-example="beauty">Skin care</button>
+      </div>
+      {% if error %}<div class="notice danger" role="alert">{{ error }}</div>{% endif %}
+      <form method="post" id="prediction-form">
+        <label for="title">Title</label>
+        <input id="title"
+               name="Title"
+               maxlength="1000"
+               placeholder="e.g. A durable chew toy for my dog"
+               value="{{ title }}">
+        <label for="text">Text or review</label>
+        <textarea id="text"
+                  name="Text"
+                  rows="7"
+                  maxlength="10000"
+                  placeholder="Add useful details about the product…">{{ text }}</textarea>
+        <div class="form-bottom">
+          <small>At least one field is required. 10,000 characters combined.</small>
+          <button class="primary" type="submit">
+            Classify text <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </form>
+    </section>
+    <section class="card results" aria-live="polite">
+      <div class="section-heading">
+        <h2>Your category path</h2>
+        <span class="muted">02 / Result</span>
+      </div>
+      {% if result and result.categories %}
+        <div class="result-status">
+          Prediction ready
+          {% if result.needs_review %}
+            <span class="badge amber">Review suggested</span>
+          {% else %}
+            <span class="badge">Model suggestion</span>
+          {% endif %}
+        </div>
+        <ol class="path">
+          {% for category in result.categories %}
+            <li>
+              <span class="step">0{{ loop.index }}</span>
+              <div>
+                <small>Category level {{ loop.index }}</small><strong>{{ category }}</strong>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        <div class="score">
+          <span>Path ranking score</span><strong>{{ '%.3f'|format(result.path_score) }}</strong>
+        </div>
+        <p class="muted">A relative model ranking, not the probability that this result is correct.</p>
+        {% for reason in result.review_reasons %}<div class="notice">{{ reason }}</div>{% endfor %}
+        <details>
+          <summary>Compare alternative paths</summary>
+          {% for alternative in result.alternatives %}
+            <p>
+              {{ alternative.categories|join(" → ") }} <small>({{ '%.3f'|format(alternative.path_score) }})</small>
+            </p>
+          {% endfor %}
+        </details>
+      {% elif result %}
+        <div class="empty-state">
+          <span class="orb">?</span>
+          <h3>More context needed</h3>
+          <p>{{ result.review_reasons|join(" ") }}</p>
+        </div>
+      {% else %}
+        <div class="empty-state">
+          <span class="orb">◈</span>
+          <h3>Start with a few words.</h3>
+          <p>Your prediction will appear here as a complete category path, with alternatives and review indicators.</p>
+          <div class="sample-path">
+            <span>Department</span> → <span>Category</span> → <span>Subcategory</span>
+          </div>
+        </div>
+      {% endif %}
+    </section>
+  </div>
+  <section class="strip">
+    <div>
+      <strong>A valid path, every time</strong>
+      <p>Predictions are constrained to category combinations seen during training.</p>
+    </div>
+    <div>
+      <strong>Built to be inspected</strong>
+      <p>Explore the taxonomy, measured results and the model’s limitations.</p>
+    </div>
+    <div>
+      <strong>Bring a whole file</strong>
+      <p>
+        <a href="/batch">Classify up to 100 CSV rows</a> using the same prediction engine.
+      </p>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,21 @@
+name: Verify live deployment
+# Render handles CD after CI checks pass. This independent manual verifier does
+# not create a pending commit check that could deadlock Render's CI gate.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      APP_URL: ${{ vars.APP_URL }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Require the configured deployment URL
+        run: test -n "$APP_URL"
+      - run: python scripts/smoke_test.py --url "$APP_URL" --attempts 24

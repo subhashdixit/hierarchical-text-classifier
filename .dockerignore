@@ -1,0 +1,14 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+*.egg-info
+archive
+notebooks
+data
+tests
+docs
+.env
+reports/test_predictions.csv
+reports/split_manifest.csv
+reports/figures

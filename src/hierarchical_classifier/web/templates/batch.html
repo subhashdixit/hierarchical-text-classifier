@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Batch classification{% endblock %}
+{% block content %}
+  <section class="hero">
+    <p class="eyebrow">ONE FILE. MANY PREDICTIONS.</p>
+    <h1>Organize a batch of text.</h1>
+    <p class="lede">
+      Upload a UTF-8 CSV and download the original title/text alongside predicted categories, scores and row-level review messages.
+    </p>
+  </section>
+  <div class="workspace">
+    <section class="card">
+      <h2>Upload CSV</h2>
+      {% if error %}<div class="notice danger" role="alert">{{ error }}</div>{% endif %}
+      <form method="post" enctype="multipart/form-data">
+        <label for="file">Choose a CSV file</label>
+        <input type="file" id="file" name="file" accept=".csv,text/csv" required>
+        <p class="muted">Maximum 2 MB and 100 data rows. No files are saved to disk.</p>
+        <button class="primary" type="submit">Classify and download ↗</button>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Prepare your file</h2>
+      <ol class="instructions">
+        <li>
+          Use exact column names <code>Title</code> and <code>Text</code>.
+        </li>
+        <li>Enter text in at least one field per row.</li>
+        <li>Download results and check rows marked for review.</li>
+      </ol>
+      <a class="button secondary" href="/sample.csv">Download an example CSV</a>
+      <p class="muted">
+        Blank or invalid rows receive their own error message. A malformed file is rejected. Spreadsheet formula prefixes are escaped in downloads.
+      </p>
+    </section>
+  </div>
+{% endblock %}
