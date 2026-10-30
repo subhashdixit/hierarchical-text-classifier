@@ -1,6 +1,7 @@
 """Check readiness and a real prediction at a local or deployed HTTP URL."""
 
 import argparse
+from http.client import HTTPException
 import json
 import time
 from urllib.error import HTTPError, URLError
@@ -11,7 +12,7 @@ def check(base_url: str, attempts: int) -> None:
     """Retry cold starts; require readiness and a complete prediction path."""
     base = base_url.rstrip("/")
     last_error = None
-    for _ in range(attempts):
+    for attempt in range(attempts):
         try:
             with urlopen(base + "/health/ready", timeout=20) as response:
                 if json.load(response)["status"] != "ready":
@@ -30,9 +31,17 @@ def check(base_url: str, attempts: int) -> None:
                 raise ValueError("Unexpected prediction contract")
             print("Readiness and real HTTP prediction passed:", base)
             return
-        except (HTTPError, URLError, TimeoutError, ValueError) as exc:
+        except (
+            HTTPError,
+            URLError,
+            TimeoutError,
+            ValueError,
+            ConnectionError,
+            HTTPException,
+        ) as exc:
             last_error = type(exc).__name__
-            time.sleep(10)
+            if attempt + 1 < attempts:
+                time.sleep(10)
     raise SystemExit(f"Smoke test failed after {attempts} attempts ({last_error}).")
 
 
