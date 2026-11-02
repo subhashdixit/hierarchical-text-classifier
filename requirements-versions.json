@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "repository": "hierarchical-text-classifier",
+  "recommended_python": "3.11.11",
+  "resolver": "uv==0.13.6",
+  "files": [
+    {
+      "path": "requirements-dev.in",
+      "sha256": "a2a68f225aa9157d748ff4c4d42f85dfc8b6501457c4d0c655cd42ac26d04a9b"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "1212e85c76ab97d95ad7227dce2745603e302622bcb5fad599ce2e857aca849a"
+    },
+    {
+      "path": "requirements.in",
+      "sha256": "283e4c40971839b8a572a13c6bb25e1bef64aafc9a2eef4237d77777b0512129"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "e2ad8e89e677550627d40ea24ba2a5879d4eca4fcc53ca8ea386c1f0be746d1b"
+    }
+  ]
+}

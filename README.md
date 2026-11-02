@@ -875,3 +875,14 @@ Read the requirements, run the UI, call the API, follow preprocessing → TF-IDF
 Useful future work: stronger data provenance, improved rare-category handling, group-aware cross-validation, calibrated uncertainty/abstention, a new external holdout, richer domain-shift checks, rate limiting, automated vulnerability scanning and monitored release promotion. These are future improvements, not completed features.
 
 Supporting guides: [requirements](docs/requirements.md), [architecture](docs/architecture.md), [API](docs/api.md), [model card](docs/model-card.md), [deployment](docs/deployment.md), [contributing](CONTRIBUTING.md).
+
+## Exact local dependency versions
+
+[DEPENDENCIES.md](DEPENDENCIES.md) lists the pinned runtime, development and training environments. `requirements.txt` now explicitly records all external runtime package versions, including transitive dependencies.
+
+```bash
+python3.11 -m venv .venv
+# Activate: source .venv/bin/activate (Windows: .venv\Scripts\activate)
+python -m pip install -r requirements.txt
+python -m pip check
+```
